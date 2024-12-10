@@ -1,0 +1,320 @@
+:root{
+
+  --width-mobile: 20.4375rem;
+  --width-desktop: 69.375rem;
+
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh; 
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  background: #EFFAFA;
+}
+
+.sr-only{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
+.text{
+  font-family: "League Spartan", sans-serif;
+  font-size: 0.9375rem;
+  font-optical-sizing: auto;
+  font-weight: 500;  
+  font-style: normal;  
+}
+
+.text-bold {
+  font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+img{
+  display: block;
+}
+
+.list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button{
+  display: block;  
+  background: transparent;
+  border-style: none;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.background{
+  width: 100vw;
+  height: 9.75rem;
+  background: url(./images/bg-header-mobile.svg) no-repeat center / cover,
+              #5CA5A5;
+  position: absolute;
+}
+
+.container-section.hidden{
+  display: none;
+}
+
+
+/*MAIN*/
+
+.main-container{
+  margin: 13.25rem 0 2rem;
+}
+
+.tag-selected{
+  display: none;
+  justify-content: space-between;
+  max-width: var(--width-mobile);
+  background: #fff;
+  border-radius: 0.4rem;
+  margin: -5.5rem 0 3.5rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0.2rem 0.2rem 1rem hsla(0, 0%, 0%, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.li-selected{
+  display: flex;
+}
+
+.clear-item{
+  background: #5CA5A5;
+  padding: 0 0.4rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+
+.clear-item:hover{
+  background: #2B3939;
+}
+
+.clear-all{
+  font-size: 1rem;
+  color: #7C8F8F;
+}
+
+.clear-all:hover{
+  color: #5CA5A5;
+  text-decoration: underline;
+}
+
+
+/*SECTION*/
+
+.container-section{
+  display: flex;
+  flex-direction: column;
+  max-width: var(--width-mobile);
+  background: #fff;
+  border-radius: 0.4rem;
+  margin: 0 0 2.5rem;
+  padding: 1.875rem 1.5rem 1.5rem 1.25rem;
+  position: relative;
+  box-shadow: 0.2rem 0.2rem 1rem hsla(0, 0%, 0%, 0.2);
+}
+
+.logo{
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+    top: -1.5rem; left: 1.25rem;
+}
+
+.presentation{
+  font-size: 0.8125rem;
+  color: #5CA5A5;
+}
+
+.presentation .title{
+  margin-right: 1.8rem;
+}
+
+.presentation span:not(.title){
+  display: inline-block;
+  font-size: 0.875rem;
+  letter-spacing: -0.0068rem;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 0.8rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.new{
+  background: #5CA5A5;
+}
+
+.featured{
+  background: #2B3939;
+}
+
+.job{
+  font-size: 0.9375rem;
+  color: #2B3939;
+  margin: 0.8rem 0;
+}
+
+.job:hover{
+  cursor: pointer;
+  color: #5CA5A5;
+}
+
+.category{
+  font-size: 1rem;
+  color: #7C8F8F;
+}
+
+.category li{ 
+  margin-right: 1.5rem;
+}
+
+.working-time{
+  position: relative;
+}
+
+.working-time::before{
+  content: '';
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: #B7C4C4;
+  position: absolute;
+    top: calc(50% - 0.125rem); left: -0.8rem;
+}
+
+.working-time::after{
+  content: '';
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: #B7C4C4;
+  position: absolute;
+    top: calc(50% - 0.125rem); right: -0.8rem;
+}
+
+.line{
+  width: 100%;
+  height: 0.0625rem;
+  background: hsl(180, 10%, 74%);
+  border: none;
+  margin: 1.25rem 0 1.25rem;
+}
+
+.list-tags{
+  font-size: 1rem;
+  gap: 1rem;
+}
+
+.container-section .select:hover{
+  background: #5CA5A5;
+  color: #fff;
+}
+
+.select{
+  background: #EFFAFA;
+  color: #5CA5A5;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.0075rem;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
+}
+
+
+@media screen and (min-width: 72rem){
+
+  .background{
+    background: url(./images/bg-header-desktop.svg) no-repeat center / cover,
+                #5CA5A5;
+  }
+  
+
+  /*MAIN*/
+  
+  .tag-selected{
+    max-width: 100%;
+    width: var(--width-desktop);
+    padding: 1.25rem 2.5rem;
+  }
+  
+  .tag-selected .list-tags{
+    margin: 0;
+  }
+
+  
+/*SECTION*/
+  
+  .container-section{
+    max-width: 100%;
+    width: var(--width-desktop);
+    margin: 0 0 1.5rem;
+    padding: 2rem 2.5625rem 2rem 2.1875rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logo{
+    width: 5.5rem;
+    height: 5.5rem;
+    position: relative;
+      top: 0; left: unset;
+  }
+
+  .container-text{
+    justify-self: flex-start;
+    margin-left: 1.5rem;
+  }
+  
+  .presentation{
+    font-size: 1.125rem;
+  }
+
+  .job{
+    font-size: 1.375rem;
+    margin: 0.4rem 0;
+  }
+
+  .category{
+    font-size: 1.125rem;
+    letter-spacing: -0.00875rem;
+  }
+  
+  .line{
+    display: none;
+  }
+  
+  .list-tags{
+    margin-left: auto;
+  }
+  
+}
